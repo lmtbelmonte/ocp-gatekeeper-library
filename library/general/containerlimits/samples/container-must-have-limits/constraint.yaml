@@ -8,5 +8,5 @@ spec:
       - apiGroups: [""]
         kinds: ["Pod"]
   parameters:
-    cpu: "200m"
-    memory: "1Gi"
+    cpu: "1"
+    memory: "2Gi"
