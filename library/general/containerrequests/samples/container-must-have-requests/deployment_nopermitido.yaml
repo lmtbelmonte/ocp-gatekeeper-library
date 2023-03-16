@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gatekeeper-nopermitido
+  labels:
+    owner: luis.merino      
+    app: httpd
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - name: httpd-nopermitido
+        image: "quay.io/centos7/httpd-24-centos7"

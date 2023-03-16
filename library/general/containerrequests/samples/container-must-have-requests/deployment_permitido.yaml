@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gatekeeper-permitido
+  labels:
+    owner: luis.merino      
+    app: httpd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - name: httpd-permitido
+        image: "quay.io/centos7/httpd-24-centos7"
+        resources:
+          requests:
+            memory: "200M"
+            cpu: "200m"
+          limits:
+            memory: "1G"
+            cpu: "1"
