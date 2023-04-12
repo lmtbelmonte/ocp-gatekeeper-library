@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gatekeeper-nopermitido
+  name: requests-nopermitido
   labels:
     owner: luis.merino      
     app: httpd
